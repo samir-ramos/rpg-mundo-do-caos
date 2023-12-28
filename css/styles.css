@@ -29,7 +29,7 @@ body {
 #game-panel {
   max-width: 1000px;
   padding: 20px 40px;
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -50,6 +50,13 @@ body {
   white-space: nowrap;
   border-bottom: 3px solid var(--white);
   padding-bottom: 15px;
+}
+
+#game-panel #game-history .history-paragraph {
+  font-family: "Indie Flower", cursive;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-indent: 2em;
 }
 
 /* Select character name */
