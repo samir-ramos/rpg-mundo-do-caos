@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Indie+Flower&family=Rubik+Doodle+Shadow&family=Rubik+Maps&display=swap");
+
+:root {
+  --orange: #ff6c22;
+  --dark-blue: #132043;
+  --purple: #3d30a2;
+  --yellow: #ffc436;
+  --light-yellow: #fbecb2;
+  --light-red: #ff6969;
+  --white: #fefefe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+}
+
+#game-panel {
+  max-width: 1000px;
+  padding: 20px 40px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 5px solid var(--orange);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+#game-panel #game-title {
+  font-family: "Rubik Doodle Shadow", monospace;
+  font-size: 2.5em;
+  text-align: center;
+  white-space: nowrap;
+  border-bottom: 3px solid var(--white);
+  padding-bottom: 15px;
+}
+
+/* Select character name */
+
+#game-panel #player-entry {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-panel #player-entry #username-label {
+  display: flex;
+  column-gap: 10px;
+  font-family: "Rubik Maps", monospace;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+#game-panel #player-entry #username {
+  font-family: "Courier Prime", monospace;
+  padding: 0 10px 2px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--white);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+#game-panel #player-entry #enter-name {
+  padding: 5px 10px;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.2em;
+  font-weight: 900;
+  background-color: var(--purple);
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+
+/* All about the player info */
+
+#game-panel #player-info {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: [info-start] max-content [info-middle] 1fr [info-end];
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-yellow);
+  color: var(--dark-blue);
+}
+
+#game-panel #player-info #player-name {
+  font-family: "Rubik Maps", monospace;
+  font-weight: 100;
+
+  padding-right: 20px;
+}
+
+#game-panel #player-info #player-attributes {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Courier Prime", monospace;
+}
+
+#game-panel #player-info #player-inventory {
+  grid-column: info-start / info-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-panel #player-info #player-inventory #inventory-list {
+  margin-bottom: 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.8em;
+  grid-column: 1 / 4;
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+#game-panel #player-info #player-inventory .inventory-item {
+  place-self: center;
+  height: 100px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+  border: 5px solid var(--orange);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: pointer;
+  font-family: "Courier Prime", monospace;
+}
+
+#game-panel #player-info #player-inventory .inventory-item .item-description {
+  font-size: 1.7em;
+  text-transform: uppercase;
+}
+
+#game-panel #player-info #player-inventory .inventory-item .item-quantity {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
