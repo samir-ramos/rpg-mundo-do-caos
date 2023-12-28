@@ -1,2 +1,2 @@
-# rpg-kill-them-all
+# rpg-mundo-do-caos
 First RPG game
