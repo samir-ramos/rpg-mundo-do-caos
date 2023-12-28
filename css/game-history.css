@@ -1,0 +1,33 @@
+#game__history {
+  height: 770px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  display: none;
+}
+
+#game__history #history {
+  overflow-y: scroll;
+  flex-grow: 1;
+  height: calc(100% - 120px);
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.7),
+    0px 5px 5px -5px rgba(0, 0, 0, 0.7);
+}
+
+#game__history .history__paragraph {
+  font-family: "Indie Flower", cursive;
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-indent: 2em;
+}
+
+#game__history #button__panel {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#game__history #button__panel .button__panel {
+  height: 30px;
+}

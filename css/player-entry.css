@@ -1,0 +1,42 @@
+#player__entry {
+  display: none;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+#player__entry #username__label {
+  display: flex;
+  column-gap: 5px;
+  font-family: "Rubik Maps", monospace;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+#player__entry #username {
+  font-family: "Courier Prime", monospace;
+  padding: 0 5px 2px 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  color: var(--white);
+  /* text-transform: uppercase; */
+  font-size: 1em;
+}
+
+.btn__game__settings {
+  padding: 0 10px;
+  font-family: "Indie Flower", cursive;
+  font-size: 0.8em;
+  font-weight: 900;
+  background-color: var(--purple);
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}

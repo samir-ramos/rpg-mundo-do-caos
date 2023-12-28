@@ -5,144 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RPG - DUNGEONS AND DRAGONS</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/action-zone.css" />
+    <link rel="stylesheet" href="css/game-board.css" />
+    <link rel="stylesheet" href="css/game-history.css" />
+    <link rel="stylesheet" href="css/monster-info.css" />
+    <link rel="stylesheet" href="css/player-config.css" />
+    <link rel="stylesheet" href="css/player-entry.css" />
   </head>
   <body>
-    <div id="game-panel">
-      <h1 id="game-title">RPG - DUNGEONS AND DRAGONS</h1>
-      <section id="game-history">
-        <p class="history-paragraph">
-          No lendário continente conhecido como <strong>Arvoria</strong>, a
-          harmonia entre humanos e anões floresceu por séculos, mas a paz
-          sustentada por ambos começou a desvanecer à medida que os recursos
-          escasseavam, pressagiando um conflito iminente. Com a ameaça iminente
-          da extinção por uma possível desvantagem numérica, a população
-          crescia, esticando as fronteiras do já exíguo território.
-        </p>
+    <div id="game__panel">
+      <h1 id="game__title">RPG - MUNDO DO CAOS</h1>
+      <section id="game__history">
+        <div id="history">
+          <p class="history__paragraph">
+            No lendário continente conhecido como <strong>Arvoria</strong>, a
+            harmonia entre humanos e anões floresceu por séculos, mas a paz
+            sustentada por ambos começou a desvanecer à medida que os recursos
+            escasseavam, pressagiando um conflito iminente. Com a ameaça
+            iminente da extinção por uma possível desvantagem numérica, a
+            população crescia, esticando as fronteiras do já exíguo território.
+          </p>
 
-        <p class="history-paragraph">
-          Impulsionados pela necessidade de encontrar uma solução que não
-          resultasse em um confronto catastrófico, humanos e anões uniram forças
-          em um esforço sem precedentes para explorar além de suas terras
-          conhecidas. A descoberta da navegação acendeu uma faísca de esperança
-          em seus corações, motivando a construção de uma colossal frota
-          destinada a desbravar o vasto e misterioso
-          <strong>Mar das Névoas</strong>.
-        </p>
+          <p class="history__paragraph">
+            Impulsionados pela necessidade de encontrar uma solução que não
+            resultasse em um confronto catastrófico, humanos e anões uniram
+            forças em um esforço sem precedentes para explorar além de suas
+            terras conhecidas. A descoberta da navegação acendeu uma faísca de
+            esperança em seus corações, motivando a construção de uma colossal
+            frota destinada a desbravar o vasto e misterioso
+            <strong>Mar das Névoas</strong>.
+          </p>
 
-        <p class="history-paragraph">
-          Em uma jornada repleta de incertezas e sacrifícios, os marinheiros
-          navegaram por dias, enfrentando a escassez de suprimentos e a
-          exaustão, até finalmente avistarem uma promissora linha costeira. Uma
-          corrida frenética levou toda a frota em direção àquela praia distante,
-          onde um novo capítulo se desdobraria em suas vidas.
-        </p>
+          <p class="history__paragraph">
+            Em uma jornada repleta de incertezas e sacrifícios, os marinheiros
+            navegaram por dias, enfrentando a escassez de suprimentos e a
+            exaustão, até finalmente avistarem uma promissora linha costeira.
+            Uma corrida frenética levou toda a frota em direção àquela praia
+            distante, onde um novo capítulo se desdobraria em suas vidas.
+          </p>
 
-        <p class="history-paragraph">
-          Ao estabelecerem acampamento naquele desconhecido continente, os
-          <em>EXPLORADORES</em> mal perceberam que não estavam sozinhos. O vasto
-          território de <strong>Drakmoria</strong> se estendia diante deles,
-          três vezes maior que seu lar anterior, e acreditavam ser os únicos
-          habitantes daquela nova terra.
-        </p>
+          <p class="history__paragraph">
+            Ao estabelecerem acampamento naquele desconhecido continente, os
+            <em>EXPLORADORES</em> mal perceberam que não estavam sozinhos. O
+            vasto território de <strong>Drakmoria</strong> se estendia diante
+            deles, três vezes maior que seu lar anterior, e acreditavam ser os
+            únicos habitantes daquela nova terra.
+          </p>
 
-        <p class="history-paragraph">
-          Entretanto, o desconhecido não era desabitado. Enquanto os
-          recém-chegados humanos e anões iniciavam suas explorações, povos
-          <em>NATIVOS</em> observavam cautelosamente. Originários do próprio
-          <strong>Aetheria</strong>, estes povos mantiveram uma existência
-          pacífica desde tempos imemoriais, observando os eventos se desdobrarem
-          com uma mistura de curiosidade e cautela.
-        </p>
+          <p class="history__paragraph">
+            Entretanto, o desconhecido não era desabitado. Enquanto os
+            recém__chegados humanos e anões iniciavam suas explorações, povos
+            <em>NATIVOS</em> observavam cautelosamente. Originários do próprio
+            <strong>Aetheria</strong>, estes povos mantiveram uma existência
+            pacífica desde tempos imemoriais, observando os eventos se
+            desdobrarem com uma mistura de curiosidade e cautela.
+          </p>
 
-        <p class="history-paragraph">
-          A história de dois mundos colidindo, de culturas se encontrando e
-          misturando-se, agora aguarda para ser desvendada. Enquanto os
-          <em>EXPLORADORES</em> traçam seus caminhos no vasto
-          <strong>Drakmoria</strong>, um mundo de mistérios, descobertas e
-          desafios aguarda aqueles que ousam explorar este novo horizonte.
-        </p>
-        <div id="button-panel">
-          <button id="enter-game">ENTER GAME</button>
-          <button id="game-info">INFO</button>
+          <p class="history__paragraph">
+            A história de dois mundos colidindo, de culturas se encontrando e
+            misturando__se, agora aguarda para ser desvendada. Enquanto os
+            <em>EXPLORADORES</em> traçam seus caminhos no vasto
+            <strong>Drakmoria</strong>, um mundo de mistérios, descobertas e
+            desafios aguarda aqueles que ousam explorar este novo horizonte.
+          </p>
+        </div>
+        <div id="button__panel">
+          <button id="enter__game" class="button__panel btn__game__settings">
+            ENTRAR
+          </button>
+          <button id="game__info" class="button__panel btn__game__settings">
+            INFORMAÇÕES
+          </button>
         </div>
       </section>
-      <div id="player-entry">
-        <label for="username" id="username-label">
-          Character name:
-          <input type="text" id="username" />
+      <section id="player__entry">
+        <label for="username" id="username__label">
+          Nome do personagem:
+          <input type="text" id="username" autocomplete="off" autofocus />
         </label>
-        <button id="enter-name">ACCEPT</button>
-      </div>
-      <div id="player-info">
-        <h2 id="player-name">Nome do personagem</h2>
-        <div id="player-attributes">
-          <p id="player-level">Level:<span id="p-level">01</span></p>
-          <p id="player-xp">XP:<span id="p-xp">000000</span></p>
-          <p id="player-health">Health:<span id="p-health">0000</span></p>
-        </div>
-        <div id="player-inventory">
-          <h2 id="inventory-list">Inventory</h2>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
+        <button id="enter__name" class="btn__game__settings">ACEITAR</button>
+      </section>
+      <main id="game__board">
+        <section id="player__config">
+          <div id="player__info">
+            <h2 id="player__name">Nome do personagem</h2>
+            <div id="player__attributes">
+              <p id="player__level">Level:<span id="p__level">01</span></p>
+              <p id="player__xp">XP:<span id="p__xp">000000</span></p>
+              <p id="player__health">Health:<span id="p__health">0000</span></p>
+            </div>
+            <div id="player__inventory">
+              <h2 id="inventory__list">Inventário</h2>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+            </div>
           </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
+        </section>
+        <section id="action__zone">
+          <p id="text">
+            Bem-vindo(a) ao mundo vasto e misterioso de Mundo do Caos!<br />
+            Prepare-se para embarcar em uma jornada épica repleta de aventuras,
+            desafios e descobertas emocionantes. Neste universo repleto de magia
+            e perigos, você terá a oportunidade de forjar seu próprio
+            destino.<br />
+            Escolha seu caminho, encontre aliados leais, enfrente criaturas
+            lendárias e mergulhe em histórias que irão desafiar sua coragem e
+            habilidades.<br />
+            Prepare-se para explorar terras desconhecidas, desvendar mistérios
+            ancestrais e escrever sua própria lenda neste RPG onde o destino
+            aguarda pelas suas escolhas.<br />
+            Aventureiro(a), o mundo de Mundo do Caos aguarda por você. Boa sorte
+            e que sua jornada seja lendária!
+          </p>
+          <div id="action__button">
+            <button id="button1">ENTRAR NA CIDADE</button>
+            <button id="button2"></button>
+            <button id="button3"></button>
           </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-          <div class="inventory-item">
-            <h3 class="item-description">Empty</h3>
-            <p class="item-quantity">00</p>
-          </div>
-        </div>
-      </div>
-      <div id="action-zone">
-        <p id="text">Welcome to the RPG - DUNGEONS AND DRAGONS</p>
-        <button id="button1"></button>
-        <button id="button2"></button>
-        <button id="button3"></button>
-      </div>
-      <div id="monster-info">
-        <h2 id="monster-name"></h2>
-        <p id="monster-level">Level: <span id="m-level"></span></p>
-        <p id="monster-health">Health: <span id="m-health"></span></p>
-      </div>
+        </section>
+        <section id="monster__info">
+          <h2 id="monster__name"></h2>
+          <p id="monster__level">Level: <span id="m__level"></span></p>
+          <p id="monster__health">Health: <span id="m__health"></span></p>
+        </section>
+      </main>
     </div>
     <script src="js/app.js"></script>
   </body>
