@@ -1,6 +1,6 @@
 #game__board {
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
 }
