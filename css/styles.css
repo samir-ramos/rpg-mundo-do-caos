@@ -1,56 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Indie+Flower&family=Rubik+Doodle+Shadow&family=Rubik+Maps&display=swap");
-
 :root {
-  --orange: #ff6c22;
-  --dark-blue: #132043;
-  --purple: #3d30a2;
-  --yellow: #ffc436;
-  --light-yellow: #fbecb2;
-  --light-red: #ff6969;
-  --white: #fefefe;
+  --dark-blue: #112d4e;
+  --light-blue: #3f72af;
+  --dark-gray: #52616b;
+  --light-gray: #dbe2ef;
+  --dark-red: #903749;
+  --light-red: #e84545;
+  --white: #f6f6f6;
+  --black: #222831;
+  --dark-purple: #424874;
+  --light-purpel: #dcd6f7;
+  --sand: #e3caa5;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
   list-style-type: none;
+  outline: none;
   text-decoration: none;
 }
 
 body {
-  height: 100svh;
+  height: 100dvh;
   width: 100%;
+  background-color: var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #444;
-  /* overflow-y: clip; */
+  overflow-y: clip;
 }
 
+/* Configurações do painel do jogo */
 #game__panel {
-  max-width: 380px;
-  max-height: 100%;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-  background-color: var(--dark-blue);
-  color: var(--white);
-  border: 5px solid var(--orange);
+  height: 90%;
+  width: 100%;
+  min-width: 380px;
+  color: var(--light-red);
+  border: 5px solid var(--light-red);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-}
-
-#game__panel #game__title {
-  font-family: "Rubik Doodle Shadow", monospace;
-  font-size: 1.5em;
-  text-align: center;
-  white-space: nowrap;
-  /* border-bottom: 3px solid var(--white); */
-  padding-bottom: 5px;
 }

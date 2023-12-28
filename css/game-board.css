@@ -1,6 +1,0 @@
-#game__board {
-  height: 100%;
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-}
