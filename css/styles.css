@@ -67,29 +67,44 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Indie Flower";
-  font-size: 1.6dvh;
+  font-size: 2.2dvh;
 }
 
 #game__panel #game__history #history {
+  margin: 1dvh 0;
   flex-grow: 1;
   text-indent: 5dvh;
   text-align: justify;
   overflow-y: scroll;
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.8),
+    0px 5px 5px -5px rgba(0, 0, 0, 0.8);
 }
 
 #game__panel #game__history #btn__panel {
-  height: 4dvh;
+  height: 6dvh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   overflow: clip;
-  border: 1px solid salmon;
+  margin-bottom: 1dvh;
+  /* border: 1px solid salmon; */
 }
 
 #game__panel #game__history #btn__panel .button__panel {
   height: 100%;
   padding: 0 1dvh;
+  background-color: var(--sand);
+  border: none;
+  border-radius: 1.5dvh;
+  font-family: "Courier Prime", monospace;
+  font-size: 2.2dvh;
+  font-weight: 600;
+  color: var(--black);
+  -webkit-border-radius: 1.5dvh;
+  -moz-border-radius: 1.5dvh;
+  -ms-border-radius: 1.5dvh;
+  -o-border-radius: 1.5dvh;
 }
 
 /* Configurações do nome do personagem */
