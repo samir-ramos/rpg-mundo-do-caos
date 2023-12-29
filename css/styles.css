@@ -28,17 +28,17 @@ body {
   width: 100dvw;
   background-color: var(--black);
   color: var(--white);
+  display: flex;
+  align-items: flexs;
+  justify-content: center;
 }
 
 #game__panel {
-  --game-panel-height: calc(100dvh - 68px - 0.6rem);
-  height: 100%;
-  max-height: 100dvh;
-  max-width: 100dvw;
+  max-width: 480px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows:
-    [row1-start] max-content [row1-end row2-start] var(--game-panel-height)
+    [row1-start] max-content [row1-end row2-start] calc(100dvh - 68px - 0.6rem)
     [row2-end row3-start] max-content [row3-end];
   row-gap: 0.3rem;
 }
@@ -46,22 +46,24 @@ body {
 #title {
   display: grid;
   place-content: center;
-  font-family: "Rubik Doodle Shadow";
-  font-size: 0.9rem;
-  background-image: url(/imgs/scroll.jpg);
-  background-size: 100dvw 6dvh;
+  background-image: url(/img/scroll.jpg);
+  background-size: 100dvw 170%;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 1;
+  font-family: "Rubik Doodle Shadow";
+  font-size: 0.9rem;
 }
 
-#game__board {
+#title #game__title {
 }
+
+/* #game__board {
+} */
 
 #game__history {
   height: 100%;
-  background-image: url(/imgs/forrest.jpg);
-  background-size: 100dvw var(--game-panel-height);
+  background-image: url(/img/forrest.jpg);
+  background-size: 100dvw calc(100dvh - 68px - 0.6rem);
   background-position: center;
   background-clip: border-box;
   padding: 10px;
