@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Indie+Flower&family=Rubik+Doodle+Shadow&family=Rubik+Maps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Indie+Flower&family=Itim&family=Rubik+Doodle+Shadow&family=Rubik+Maps&family=Sevillana&display=swap");
 
 :root {
   --dark-blue: #112d4e;
@@ -25,95 +25,72 @@
 
 body {
   height: 100dvh;
-  width: 100%;
+  width: 100dvw;
   background-color: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: clip;
-}
-
-/* Configurações do painel do jogo */
-#game__panel {
-  height: 100%;
-  width: 100%;
-  min-width: 380px;
-  padding: 1dvh;
-  display: flex;
-  flex-direction: column;
-  overflow-y: clip;
   color: var(--white);
-  border: 0.5dvh solid var(--light-red);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
-/* Configurações do título do jogo */
-#game__panel #game__title {
-  font-family: "Rubik Doodle Shadow";
-  font-size: 3.5dvh;
-  text-align: center;
-}
-
-/* Configurações da história do jogo */
-#game__panel #game__history {
-  height: 96.5%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Indie Flower";
-  font-size: 2.2dvh;
-}
-
-#game__panel #game__history #history {
-  margin: 1dvh 0;
-  flex-grow: 1;
-  text-indent: 5dvh;
-  text-align: justify;
-  overflow-y: scroll;
-  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.8),
-    0px 5px 5px -5px rgba(0, 0, 0, 0.8);
-}
-
-#game__panel #game__history #btn__panel {
-  height: 6dvh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  overflow: clip;
-  margin-bottom: 1dvh;
-  /* border: 1px solid salmon; */
-}
-
-#game__panel #game__history #btn__panel .button__panel {
+#game__panel {
+  --game-panel-height: calc(100dvh - 68px - 0.6rem);
   height: 100%;
-  padding: 0 1dvh;
-  background-color: var(--sand);
-  border: none;
-  border-radius: 1.5dvh;
-  font-family: "Courier Prime", monospace;
-  font-size: 2.2dvh;
-  font-weight: 600;
-  color: var(--black);
-  -webkit-border-radius: 1.5dvh;
-  -moz-border-radius: 1.5dvh;
-  -ms-border-radius: 1.5dvh;
-  -o-border-radius: 1.5dvh;
+  max-height: 100dvh;
+  max-width: 100dvw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    [row1-start] max-content [row1-end row2-start] var(--game-panel-height)
+    [row2-end row3-start] max-content [row3-end];
+  row-gap: 0.3rem;
 }
 
-/* Configurações do nome do personagem */
-#game__panel #player__entry {
+#title {
+  display: grid;
+  place-content: center;
+  font-family: "Rubik Doodle Shadow";
+  font-size: 0.9rem;
+  background-image: url(/imgs/scroll.jpg);
+  background-size: 100dvw 6dvh;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+#game__board {
+}
+
+#game__history {
+  height: 100%;
+  background-image: url(/imgs/forrest.jpg);
+  background-size: 100dvw var(--game-panel-height);
+  background-position: center;
+  background-clip: border-box;
+  padding: 10px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  overflow-y: auto;
+}
+
+#game__history .history__paragraph {
+  font-family: "Courier Prime";
+  text-align: justify;
+  text-indent: 2rem;
+  margin-bottom: 1rem;
+}
+
+#player__entry {
   display: none;
 }
 
-/* Configurações do tabuleiro do jogo */
-
-#game__panel #game__board {
+#game__actions {
   display: none;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.3rem;
+  padding: 5px;
+}
+
+footer > button {
+  height: 1.5rem;
 }

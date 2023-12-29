@@ -8,9 +8,11 @@
   </head>
   <body>
     <div id="game__panel">
-      <h1 id="game__title">RPG - MUNDO DO CAOS</h1>
-      <section id="game__history">
-        <div id="history">
+      <header id="title">
+        <h1 id="game__title">RPG - MUNDO DO CAOS</h1>
+      </header>
+      <main id="game__board">
+        <section id="game__history">
           <p class="history__paragraph">
             No lendário continente conhecido como <strong>Arvoria</strong>, a
             harmonia entre humanos e anões floresceu por séculos, mas a paz
@@ -62,122 +64,136 @@
             <strong>Drakmoria</strong>, um mundo de mistérios, descobertas e
             desafios aguarda aqueles que ousam explorar este novo horizonte.
           </p>
-        </div>
-        <div id="btn__panel">
-          <button id="enter__game" class="button__panel">ENTRAR</button>
-          <button id="game__info" class="button__panel">INFORMAÇÕES</button>
-        </div>
-      </section>
-      <section id="player__entry">
-        <label for="username" id="username__label">
-          Nome do personagem:
-          <input type="text" id="username" autocomplete="off" autofocus />
-        </label>
-        <button id="enter__name" class="btn__game__settings">ACEITAR</button>
-      </section>
-      <main id="game__board">
-        <section id="player__config">
-          <div id="player__info">
-            <h2 id="player__name">Nome do personagem</h2>
-            <div id="player__attributes">
-              <p id="player__level">Level:<span id="p__level">01</span></p>
-              <p id="player__xp">XP:<span id="p__xp">000000</span></p>
-              <p id="player__health">Health:<span id="p__health">0000</span></p>
+        </section>
+        <section id="player__entry">
+          <label for="username" id="username__label">
+            Nome do personagem:
+            <input type="text" id="username" autocomplete="off" autofocus />
+          </label>
+          <div id="type__selection">
+            <div id="race__selection" class="btn__panel">
+              <h2 id="race__title" class="type__title">RAÇA</h2>
+              <button id="male__human" class="button__panel">HUMANO</button>
+              <button id="female__human" class="button__panel">HUMANA</button>
+              <button id="male__dwarf" class="button__panel">ANÃO</button>
+              <button id="female__dwarf" class="button__panel">ANÃ</button>
             </div>
-            <div id="player__inventory">
-              <h2 id="inventory__list">Inventário</h2>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
-              <div class="inventory__item">
-                <h3 class="item__description">Vazio</h3>
-                <p class="item__quantity">--</p>
-              </div>
+            <div id="class__selectio" class="btn__panel">
+              <h2 id="class__title" class="type__title">CLASSE</h2>
+              <button id="warrior" class="button__panel">GUERREIRO(A)</button>
+              <button id="hunter" class="button__panel">CAÇADOR(A)</button>
+              <button id="assassin" class="button__panel">ASSASSINO(A)</button>
+              <button id="mage" class="button__panel">MAGO(A)</button>
+              <button id="cleric" class="button__panel">SACERDOTE(ISA)</button>
+              <button id="paladin" class="button__panel">PALADINO(A)</button>
             </div>
           </div>
         </section>
-        <section id="action__zone">
-          <p id="text">
-            Bem-vindo(a) ao mundo vasto e misterioso de Mundo do Caos!<br />
-            Prepare-se para embarcar em uma jornada épica repleta de aventuras,
-            desafios e descobertas emocionantes. Neste universo repleto de magia
-            e perigos, você terá a oportunidade de forjar seu próprio
-            destino.<br />
-            Escolha seu caminho, encontre aliados leais, enfrente criaturas
-            lendárias e mergulhe em histórias que irão desafiar sua coragem e
-            habilidades.<br />
-            Prepare-se para explorar terras desconhecidas, desvendar mistérios
-            ancestrais e escrever sua própria lenda neste RPG onde o destino
-            aguarda pelas suas escolhas.<br />
-            Aventureiro(a), o mundo de Mundo do Caos aguarda por você. Boa sorte
-            e que sua jornada seja lendária!
-          </p>
-          <div id="action__button">
-            <button id="button1">ENTRAR NA CIDADE</button>
-            <button id="button2"></button>
-            <button id="button3"></button>
-          </div>
-        </section>
-        <section id="monster__info">
-          <h2 id="monster__name"></h2>
-          <p id="monster__level">Level: <span id="m__level"></span></p>
-          <p id="monster__health">Health: <span id="m__health"></span></p>
+        <section id="game__actions">
+          <section id="player__config">
+            <div id="player__info">
+              <h2 id="player__name">Nome do personagem</h2>
+              <div id="player__attributes">
+                <p id="player__level">Level:<span id="p__level">01</span></p>
+                <p id="player__xp">XP:<span id="p__xp">000000</span></p>
+                <p id="player__health">
+                  Health:<span id="p__health">0000</span>
+                </p>
+              </div>
+              <div id="player__inventory">
+                <h2 id="inventory__list">Inventário</h2>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+                <div class="inventory__item">
+                  <h3 class="item__description">Vazio</h3>
+                  <p class="item__quantity">--</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="action__zone">
+            <p id="text">
+              Bem-vindo(a) ao mundo vasto e misterioso de Mundo do Caos!<br />
+              Prepare-se para embarcar em uma jornada épica repleta de
+              aventuras, desafios e descobertas emocionantes. Neste universo
+              repleto de magia e perigos, você terá a oportunidade de forjar seu
+              próprio destino.<br />
+              Escolha seu caminho, encontre aliados leais, enfrente criaturas
+              lendárias e mergulhe em histórias que irão desafiar sua coragem e
+              habilidades.<br />
+              Prepare-se para explorar terras desconhecidas, desvendar mistérios
+              ancestrais e escrever sua própria lenda neste RPG onde o destino
+              aguarda pelas suas escolhas.<br />
+              Aventureiro(a), o mundo de Mundo do Caos aguarda por você. Boa
+              sorte e que sua jornada seja lendária!
+            </p>
+          </section>
+          <section id="monster__info">
+            <h2 id="monster__name"></h2>
+            <p id="monster__level">Level: <span id="m__level"></span></p>
+            <p id="monster__health">Health: <span id="m__health"></span></p>
+          </section>
         </section>
       </main>
+      <footer id="buttons">
+        <button id="button1" class="btn">ENTRAR</button>
+        <button id="button2" class="btn">INFORMAÇÕES</button>
+        <button id="button3" class="btn"></button>
+      </footer>
     </div>
-    <script src="js/app.js"></script>
   </body>
 </html>
