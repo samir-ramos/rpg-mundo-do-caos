@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Indie+Flower&family=Rubik+Doodle+Shadow&family=Rubik+Maps&display=swap");
+
 :root {
   --dark-blue: #112d4e;
   --light-blue: #3f72af;
@@ -33,14 +35,20 @@ body {
 
 /* Configurações do painel do jogo */
 #game__panel {
-  height: 90%;
+  height: 100%;
   width: 100%;
   min-width: 380px;
-  color: var(--light-red);
+  color: var(--white);
   border: 5px solid var(--light-red);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+#game__panel #game__title {
+  font-family: "Rubik Doodle Shadow";
+  font-size: 1em;
+  text-align: center;
 }
