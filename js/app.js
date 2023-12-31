@@ -1,19 +1,30 @@
-const btnEnter = document.querySelector("#enter__game");
-const gameHistory = document.querySelector("#game__history");
+const gameHistory = document.getElementById("game__history");
+const playerEntry = document.getElementById("player__entry");
+const gameActions = document.getElementById("game__actions");
+const namePicked = document.getElementById("username");
+const playerName = document.getElementById("player__name");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
+const button3 = document.getElementById("button3");
 
-const acceptName = document.querySelector("#enter__name");
-const playerName = document.querySelector("#player__name");
-const userName = document.querySelector("#username");
-const playerEntry = document.querySelector("#player__entry");
-const gameBoard = document.querySelector("#game__board");
-
-btnEnter.onclick = function () {
-  gameHistory.style.display = "none";
-  playerEntry.style.display = "flex";
-};
-
-acceptName.onclick = function () {
-  playerEntry.style.display = "none";
-  playerName.innerText = userName.value;
-  gameBoard.style.display = "flex";
-};
+button1.addEventListener("click", function () {
+  if (gameHistory.style.display !== "none") {
+    gameHistory.style.display = "none";
+    playerEntry.style.display = "grid";
+    gameActions.style.display = "none";
+    button1.innerText = "ACEITAR";
+    button2.innerText = "APAGAR";
+    button3.innerText = "VOLTAR";
+  } else if (playerEntry.style.display !== "none") {
+    gameHistory.style.display = "none";
+    playerEntry.style.display = "none";
+    gameActions.style.display = "grid";
+    playerName.innerText = namePicked.value;
+    button1.innerText = "LOJA";
+    button1.style.backgroundColor = "salmon";
+    button2.innerText = "FLORESTA";
+    button2.style.backgroundColor = "darkgreen";
+    button3.innerText = "MISSÃO";
+    button3.style.backgroundColor = "orange";
+  }
+});

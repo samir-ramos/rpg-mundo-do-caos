@@ -14,12 +14,13 @@
       <main id="game__board">
         <section id="game__history">
           <p class="history__paragraph">
-            No lendário continente conhecido como <strong>Arvoria</strong>, a
-            harmonia entre humanos e anões floresceu por séculos, mas a paz
-            sustentada por ambos começou a desvanecer à medida que os recursos
-            escasseavam, pressagiando um conflito iminente. Com a ameaça
-            iminente da extinção por uma possível desvantagem numérica, a
-            população crescia, esticando as fronteiras do já exíguo território.
+            No lendário continente conhecido como
+            <strong>Arvoria</strong>, a harmonia entre humanos e anões floresceu
+            por séculos, mas a paz sustentada por ambos começou a desvanecer à
+            medida que os recursos escasseavam, pressagiando um conflito
+            iminente. Com a ameaça iminente da extinção por uma possível
+            desvantagem numérica, a população crescia, esticando as fronteiras
+            do já exíguo território.
           </p>
 
           <p class="history__paragraph">
@@ -68,100 +69,102 @@
         <section id="player__entry">
           <label for="username" id="username__label">
             Nome do personagem:
-            <input type="text" id="username" autocomplete="off" autofocus />
+            <input
+              type="text"
+              id="username"
+              autocomplete="off"
+              autofocus
+              required
+            />
           </label>
           <div id="type__selection">
-            <div id="race__selection" class="btn__panel">
+            <div id="race__selection">
               <h2 id="race__title" class="type__title">RAÇA</h2>
               <button id="male__human" class="button__panel">HUMANO</button>
               <button id="female__human" class="button__panel">HUMANA</button>
               <button id="male__dwarf" class="button__panel">ANÃO</button>
               <button id="female__dwarf" class="button__panel">ANÃ</button>
             </div>
-            <div id="class__selectio" class="btn__panel">
+            <div id="class__selection">
               <h2 id="class__title" class="type__title">CLASSE</h2>
               <button id="warrior" class="button__panel">GUERREIRO(A)</button>
               <button id="hunter" class="button__panel">CAÇADOR(A)</button>
               <button id="assassin" class="button__panel">ASSASSINO(A)</button>
               <button id="mage" class="button__panel">MAGO(A)</button>
-              <button id="cleric" class="button__panel">SACERDOTE(ISA)</button>
+              <button id="priest" class="button__panel">SACERDOTE(ISA)</button>
               <button id="paladin" class="button__panel">PALADINO(A)</button>
             </div>
           </div>
         </section>
         <section id="game__actions">
           <section id="player__config">
-            <div id="player__info">
-              <h2 id="player__name">Nome do personagem</h2>
-              <div id="player__attributes">
-                <p id="player__level">Level:<span id="p__level">01</span></p>
-                <p id="player__xp">XP:<span id="p__xp">000000</span></p>
-                <p id="player__health">
-                  Health:<span id="p__health">0000</span>
-                </p>
+            <h2 id="player__name">Nome do personagem</h2>
+            <div id="player__attributes">
+              <p id="player__level">Level:<span id="p__level">01</span></p>
+              <p id="player__xp">XP:<span id="p__xp">000000</span></p>
+              <p id="player__health">Health:<span id="p__health">0000</span></p>
+            </div>
+            <div id="player__inventory">
+              <h2 id="inventory__list">Inventário</h2>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
               </div>
-              <div id="player__inventory">
-                <h2 id="inventory__list">Inventário</h2>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
-                <div class="inventory__item">
-                  <h3 class="item__description">Vazio</h3>
-                  <p class="item__quantity">--</p>
-                </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
+              </div>
+              <div class="inventory__item">
+                <h3 class="item__description">Vazio</h3>
+                <p class="item__quantity">--</p>
               </div>
             </div>
           </section>
@@ -194,6 +197,7 @@
         <button id="button2" class="btn">INFORMAÇÕES</button>
         <button id="button3" class="btn"></button>
       </footer>
+      <script src="js/app.js"></script>
     </div>
   </body>
 </html>

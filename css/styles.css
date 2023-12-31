@@ -12,6 +12,14 @@
   --dark-purple: #424874;
   --light-purpel: #dcd6f7;
   --sand: #e3caa5;
+
+  /** Class color */
+  --warrior: #750e21;
+  --hunter: #597e52;
+  --assassin: #ffb534;
+  --mage: #8acdd7;
+  --priest: #fefefe;
+  --paladin: #fed9ed;
 }
 
 * {
@@ -31,6 +39,7 @@ body {
   display: flex;
   align-items: flexs;
   justify-content: center;
+  font-family: "Courier Prime";
 }
 
 #game__panel {
@@ -38,45 +47,32 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows:
-    [row1-start] max-content [row1-end row2-start] calc(100dvh - 68px - 0.6rem)
+    [row1-start] max-content [row1-end row2-start] calc(
+      100dvh - 34px - 0.6rem - 55px
+    )
     [row2-end row3-start] max-content [row3-end];
   row-gap: 0.3rem;
 }
-@media (max-height=1000px) {
-  #game__panel {
-    grid-template-rows:
-      [row1-start] max-content [row1-end row2-start] calc(
-        1000px - 68px - 0.6rem
-      )
-      [row2-end row3-start] max-content [row3-end];
-  }
-}
+
 #title {
   display: grid;
   place-content: center;
-  background-image: url(/img/scroll.jpg);
-  background-size: 100dvw 170%;
-  background-repeat: no-repeat;
-  background-position: center;
   font-family: "Rubik Doodle Shadow";
   font-size: 0.9rem;
 }
 
-#title #game__title {
-}
-
-/* #game__board {
-} */
-
 #game__history {
   height: 100%;
-  background-image: url(/img/forrest.jpg);
-  background-size: 100dvw calc(100dvh - 68px - 0.6rem);
-  background-position: center;
-  background-clip: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 10px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   overflow-y: auto;
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.7),
+    0px 5px 5px -5px rgba(0, 0, 0, 0.7);
+
+  /** APAGAR A LINHA ABAIXO */
+  display: grid;
 }
 
 #game__history .history__paragraph {
@@ -86,21 +82,218 @@ body {
   margin-bottom: 1rem;
 }
 
+#game__history .history__paragraph:last-child {
+  margin-bottom: 0;
+}
+
 #player__entry {
+  height: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
+  row-gap: 10px;
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.7),
+    0px 5px 5px -5px rgba(0, 0, 0, 0.7);
+
+  /** APAGAR A LINHA ABAIXO */
   display: none;
 }
 
+#player__entry #username__label {
+  margin-top: 100px;
+  font-size: 1.2rem;
+}
+
+#player__entry #username__label #username {
+  width: 60%;
+  display: block;
+  border: none;
+  margin: 10px auto;
+  border-bottom: 1px solid var(--white);
+  background-color: transparent;
+  font-family: "Courier Prime";
+  font-size: 1.4rem;
+  color: var(--light-blue);
+}
+
+#player__entry #type__selection {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+}
+
+#player__entry #type__selection .button__panel {
+  height: 2rem;
+  font-family: "Courier Prime", monospace;
+  font-weight: 600;
+  letter-spacing: -1px;
+  padding: 0 5px;
+  border: none;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  background-color: var(--sand);
+  color: var(--black);
+}
+
+#player__entry #type__selection #race__title {
+  grid-column: 1/5;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--white);
+}
+
+#player__entry #type__selection #race__selection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 20px;
+  padding-bottom: 10px;
+}
+
+#player__entry #type__selection #class__title {
+  grid-column: 1/4;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--white);
+}
+
+#player__entry #type__selection #class__selection {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 10px 20px;
+}
+
+#player__entry #type__selection #class__selection button {
+  color: var(--white);
+}
+
+#player__entry #type__selection #class__selection #warrior {
+  background-color: var(--warrior);
+}
+#player__entry #type__selection #class__selection #hunter {
+  background-color: var(--hunter);
+}
+#player__entry #type__selection #class__selection #assassin {
+  background-color: var(--assassin);
+  color: var(--dark-blue);
+}
+#player__entry #type__selection #class__selection #mage {
+  background-color: var(--mage);
+  color: var(--dark-blue);
+}
+#player__entry #type__selection #class__selection #priest {
+  background-color: var(--priest);
+  color: var(--dark-blue);
+}
+#player__entry #type__selection #class__selection #paladin {
+  background-color: var(--paladin);
+  color: var(--dark-blue);
+}
+
 #game__actions {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 6fr 2fr;
+  row-gap: 5px;
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.7),
+    0px 5px 5px -5px rgba(0, 0, 0, 0.7);
+  overflow-y: hidden;
+  padding: 10px;
+
   display: none;
+}
+
+#game__actions #player__config {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 5px;
+}
+
+#game__actions #player__config #player__attributes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+#game__actions #player__config #player__name {
+  font-family: "Indie Flower";
+  background-color: var(--dark-gray);
+  padding: 0 10px;
+}
+
+#game__actions #player__config #player__inventory h2,
+#game__actions #player__config #player__inventory h3 {
+  font-size: 0.7rem;
+  font-family: "Courier Prime", monospace;
+  font-weight: lighter;
+}
+
+#game__actions #player__config #player__inventory h2 {
+  font-size: 0.9rem;
+  grid-column: 1/6;
+}
+
+#game__actions #player__config #player__inventory {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 5px;
+  place-content: center;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  padding: 10px 0;
+}
+
+#game__actions #player__config #player__inventory .inventory__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+
+#game__actions
+  #player__config
+  #player__inventory
+  .inventory__item
+  .item__description,
+#game__actions
+  #player__config
+  #player__inventory
+  .inventory__item
+  .item__quantity {
+  place-self: center;
 }
 
 footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 0.3rem;
-  padding: 5px;
+  padding: 5px 5px 10px 5px;
 }
 
 footer > button {
-  height: 1.5rem;
+  height: 2.5rem;
+  background-color: var(--dark-purple);
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--white);
+  border: none;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  cursor: pointer;
 }
