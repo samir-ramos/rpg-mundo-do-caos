@@ -77,13 +77,30 @@
               required
             />
           </label>
+          <p id="invalid__entry">Você precisa infomar seu nome.</p>
           <div id="type__selection">
             <div id="race__selection">
               <h2 id="race__title" class="type__title">RAÇA</h2>
-              <button id="male__human" class="btn">HUMANO</button>
-              <button id="female__human" class="btn">HUMANA</button>
-              <button id="male__dwarf" class="btn">ANÃO</button>
-              <button id="female__dwarf" class="btn">ANÃ</button>
+              <button id="male__human" class="btn btn__race" value="maleHuman">
+                HUMANO
+              </button>
+              <button
+                id="female__human"
+                class="btn btn__race"
+                value="femaleHuman"
+              >
+                HUMANA
+              </button>
+              <button id="male__dwarf" class="btn btn__race" value="maleDwarf">
+                ANÃO
+              </button>
+              <button
+                id="female__dwarf"
+                class="btn btn__race"
+                value="female__dwarf"
+              >
+                ANÃ
+              </button>
             </div>
             <div id="class__selection">
               <h2 id="class__title" class="type__title">CLASSE</h2>
@@ -188,11 +205,13 @@
               vontade e escolha uma das opções.
             </p>
           </section>
-          <section id="monster__info">
+          <section id="monster__config">
             <h2 id="monster__name">Nome do monstro</h2>
-            <p id="monster__power">Poder: <span id="m__power"></span></p>
-            <p id="monster__level">Nível: <span id="m__level"></span></p>
-            <p id="monster__health">Vida: <span id="m__health"></span></p>
+            <div id="monster__atribute">
+              <p id="monster__power">Poder: <span id="m__power"></span></p>
+              <p id="monster__level">Nível: <span id="m__level"></span></p>
+              <p id="monster__health">Vida: <span id="m__health"></span></p>
+            </div>
           </section>
         </section>
       </main>

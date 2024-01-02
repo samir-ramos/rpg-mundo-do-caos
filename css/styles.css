@@ -37,11 +37,13 @@ body {
   background-color: var(--ft-gray);
 }
 
+/** General Classes Config*/
+
 .btn {
   height: 2rem;
   padding: 0 0.2rem;
   font-family: "Courier Prime", monospace;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 900;
   text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
   border: none;
@@ -52,6 +54,8 @@ body {
   -o-border-radius: 0.5rem;
   cursor: pointer;
 }
+
+/** Game Panel Config  */
 
 #game__panel {
   height: 100dvh;
@@ -67,6 +71,7 @@ body {
   row-gap: 0.5rem;
 }
 /** Header config  */
+
 #title {
   padding: 0.4rem 0;
 }
@@ -88,10 +93,13 @@ body {
     0px 5px 5px -5px rgba(0, 0, 0, 0.7);
 }
 
+/** Section History */
+
 #game__history {
   height: 100%;
+  padding: 0.5rem 0;
   font-family: "Courier Prime", monospace;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   text-indent: 1rem;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   overflow-y: scroll;
@@ -99,23 +107,31 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, max-content);
   row-gap: 1rem;
-
-  /* display: none; */
 }
+
+/** Section Player Entry */
 
 #player__entry {
   height: 100%;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr;
+  grid-template-rows: repeat(2, max-content) 1fr;
   overflow-y: scroll;
+}
 
-  /* display: none; */
+#invalid__entry {
+  display: none;
+  font-family: "Courier Prime";
+  font-size: 0.6rem;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+  color: var(--ft-pink);
 }
 
 #username__label {
   font-family: "Courier Prime";
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding-top: 1rem;
 }
 
@@ -127,7 +143,7 @@ body {
   border: none;
   border-bottom: 1px solid var(--ft-white);
   background-color: transparent;
-  font-family: "Rubik Maps";
+  font-family: "Courier Prime";
   font-size: 1.5rem;
   font-weight: lighter;
   color: var(--ft-white);
@@ -140,6 +156,11 @@ body {
   row-gap: 1rem;
 }
 
+#type__selection button {
+  height: 1.3rem;
+  font-size: 0.8rem;
+}
+
 #race__selection {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -148,7 +169,7 @@ body {
 
 .type__title {
   font-family: "Courier Prime";
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: lighter;
 }
 
@@ -186,36 +207,34 @@ body {
   background-color: var(--priest);
 }
 
-#game__panel
-  #game__board
-  #player__entry
-  #type__selection
-  #class__selection
-  #paladin {
+#paladin {
   background-color: var(--paladin);
 }
 
-#game__panel #game__board #game__actions {
-  display: grid;
+/** Section Game Actions */
+
+#game__actions {
+  height: 100%;
+  display: none;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr max-content;
   row-gap: 1rem;
 }
 
-#game__panel #game__board #game__actions #player__config {
+#player__config {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, max-content);
   row-gap: 0.5rem;
 }
 
-#game__panel #game__board #game__actions #player__config #player__name {
+#player__name {
   font-family: "Rubik Maps";
   font-size: 1.5rem;
   font-weight: lighter;
 }
 
-#game__panel #game__board #game__actions #player__config #player__attributes {
+#player__attributes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   font-family: "Courier Prime";
@@ -255,7 +274,7 @@ body {
   place-self: center;
 }
 
-#game__panel #game__board #game__actions #player__config #inventory__list {
+#inventory__list {
   grid-column: 1/6;
   font-family: "Courier Prime";
   font-size: 0.85rem;
@@ -264,8 +283,31 @@ body {
   border-bottom: 1px solid var(--ft-white);
 }
 
+#monster__config {
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content);
+  row-gap: 0.5rem;
+}
+
+#monster__name {
+  font-family: "Rubik Maps";
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: var(--ft-pink);
+  grid-column: 1/4;
+}
+
+#monster__atribute {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: "Courier Prime";
+  font-size: 0.8rem;
+  column-gap: 0.5rem;
+}
+
 /** Foot config */
-#game__panel #buttons {
+#buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: max-content;
@@ -273,7 +315,7 @@ body {
   padding: 0.4rem 0.5rem;
 }
 
-#game__panel #buttons .btn {
+#buttons * {
   background-color: var(--ft-yellow);
   color: var(--ft-dark-blue);
 }
