@@ -77,7 +77,6 @@
               required
             />
           </label>
-          <p id="invalid__entry">Você precisa infomar seu nome.</p>
           <div id="type__selection">
             <div id="race__selection">
               <h2 id="race__title" class="type__title">RAÇA</h2>
@@ -104,18 +103,32 @@
             </div>
             <div id="class__selection">
               <h2 id="class__title" class="type__title">CLASSE</h2>
-              <button id="warrior" class="btn">GUERREIRO(A)</button>
-              <button id="hunter" class="btn">CAÇADOR(A)</button>
-              <button id="assassin" class="btn">ASSASSINO(A)</button>
-              <button id="mage" class="btn">MAGO(A)</button>
-              <button id="priest" class="btn">SACERDOTE(ISA)</button>
-              <button id="paladin" class="btn">PALADINO(A)</button>
+              <button id="warrior" class="btn btn__class" value="warrior">
+                GUERREIRO(A)
+              </button>
+              <button id="hunter" class="btn btn__class" value="hunter">
+                CAÇADOR(A)
+              </button>
+              <button id="assassin" class="btn btn__class" value="assassin">
+                ASSASSINO(A)
+              </button>
+              <button id="mage" class="btn btn__class" value="mage">
+                MAGO(A)
+              </button>
+              <button id="priest" class="btn btn__class" value="priest">
+                SACERDOTE(ISA)
+              </button>
+              <button id="paladin" class="btn btn__class" value="paladin">
+                PALADINO(A)
+              </button>
             </div>
           </div>
+          <p id="invalid__entry">Informe todos os campos acima.</p>
         </section>
         <section id="game__actions">
           <section id="player__config">
             <h2 id="player__name">Nome do personagem</h2>
+            <p id="player__power">Poder: <span id="p__power">00000</span></p>
             <div id="player__attributes">
               <p id="player__level">Nível:<span id="p__level">01</span></p>
               <p id="player__xp">XP:<span id="p__xp">000000</span></p>
@@ -188,7 +201,8 @@
           </section>
           <section id="action__zone">
             <p id="text">
-              Bem-vindo(a) ao mundo vasto e misterioso de Mundo do Caos!<br /><br />
+              Bem-vindo(a) ao mundo vasto e misterioso de
+              <strong>Mundo do Caos</strong>!<br /><br />
               Prepare-se para embarcar em uma jornada épica repleta de
               aventuras, desafios e descobertas emocionantes. Neste universo
               repleto de magia e perigos, você terá a oportunidade de forjar seu
